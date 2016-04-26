@@ -1,0 +1,106 @@
+{% extends "@Templates/layout.html.twig" %}
+
+{% block page %}
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-push-2 text-center">
+                <h1>Droid</h1>
+                <h2>The elegant task runner for devs, ops and other lazy people</h2>
+                <p class="lead">
+                    Droid will help you automate your builds, tests, deploys, background tasks, and even handle your configuration management
+                </p>
+                
+                <!-- p>Droid is based on Symfony Console commands allowing you to easily extend it's functionality</p>
+                    <br>
+                </p-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                {#
+                <div id="illustration">
+                    <img src="http://i.imgur.com/q7NHxN0.gif" alt="" >
+                </div>
+                #}
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /Header -->
+    
+
+<!-- Content -->
+<main class="content">
+
+    <!-- Lead -->
+    <section class="container space-before space-after">
+        <div class="row">
+            <div class="col-sm-10 col-sm-push-1">
+                <h1 class="text-center">What is Droid?</h1>
+                <p class="lead text-center">
+                    Droid is a task-runner, similar to Gulp, Grunt, Apache Ant, Phing, etc.
+                </p> 
+                <p class="lead text-center">
+                    It is built using standard Symfony Console Commands. This means
+                    you can use any existing commands to script your builds, tests and deploys.
+                </p>
+                <p class="lead text-center">
+                    Furthermore, Droid will just as happily run commands on remote hosts, or host groups,
+                    as it performs it's tasks locally. This allows you to use Droid as a Configuration
+                    Management tool, much like Ansible, Puppet or Chef. But much simpler, and easier to extend.
+                </p>
+                <center>
+                    <a href="/usage" class="btn btn-success btn-lg" style="color: #ffffff">Getting started</a>
+                </center>
+            </div>
+        </div>
+    </section>
+    <!-- /Lead -->
+
+
+    {#
+    <!-- Features -->
+    <section class="container space-before">
+        
+        <div class="row featurelist space-after">
+            <div class="col-md-5 col-sm-6 col-md-push-1 ">
+                <img class="img-feature img-responsive" src="/assets/images/screen1.png" alt="Sample image">
+            </div>
+            <div class="col-md-5 col-md-push-1 col-sm-6">
+                <h2 class="space-before">, <span class="text-muted">so html code is simple</span></h2>
+                <p>What you have to ask yourself is, do I feel lucky. well do ya' punk? Ever notice how sometimes you come across somebody you shouldn't have f**ked with? Well, I'm that guy. Dyin' ain't much of a livin', boy.</p>
+            </div>
+        </div>
+
+        <div class="row featurelist space-after">
+            <div class="col-md-5 col-sm-6 col-sm-push-6">
+                <img class="img-feature img-responsive" src="assets/images/screen2.png" alt="Sample image">
+            </div>
+            <div class="col-md-5 col-sm-6 col-md-pull-4 col-sm-pull-6">
+                <h2 class="space-before">Yes, I love cool backgrounds, <span class="text-muted">like the one used here</span></h2>
+                <p>There are 2 more color themes inside this template. You'll just need to uncomment 
+                    few lines in the CSS file to activate any of them. </p>
+                <p>Now, continue with our lipsum :) 
+                    This is the ak-47 assault rifle, The preferred weapon of your enemy; and it makes a distinctive sound when 
+                    fired at you, so remember it. When a naked man's chasing a woman through an alley with a butcher knife and a hard-on, I figure he's not out collecting for the red cross. well, do you have anything to say for yourself? </p>
+            </div>
+        </div>
+
+        <div class="row featurelist space-after">
+            <div class="col-md-5 col-sm-6 col-md-push-1 col-sm-6">
+                <img class="img-feature img-responsive" src="assets/images/screen3.png" alt="Sample image">
+            </div>
+            <div class="col-md-5 col-md-push-1 col-sm-6">
+                <h2 class="space-before">Violet does look good too!</span></h2>
+                <p>Here. Put that in your report! And "I may have found a way out of here. you want a guarantee, buy a toaster. are you feeling lucky punk dyin' ain't much of a livin', boy. what you have to ask yourself is, Do I feel lucky. Well do ya' punk? You see, in this world there's two kinds of people, my friend: those with loaded guns and those who dig. you dig.</p>
+            </div>
+        </div>
+    </section>
+    <!-- /Features -->
+    #}
+
+</main>
+{% endblock %}

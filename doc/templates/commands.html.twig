@@ -1,0 +1,23 @@
+{% extends "@Templates/default.html.twig" %}
+
+{% block content %}
+    <h1>Command index</h1>
+    <p class="lead">
+        Below you'll find a list of all the available commands
+        in the standard distribution of Droid.
+    </p>
+    <p class="lead">
+        Click on the command-name for full description, available arguments and options, etc.
+    </p>
+    <ul>
+    {% for command in commands %}
+        <li><code><a href="commands__{{command.getName()|urlsafe_command_name}}">{{ command.getName() }}</a></code> {{ command.getDescription()}}
+        </li>
+    {% endfor %}
+    </ul>
+    
+    <h3>Want more commands?</h3>
+    <p>So do we! And the good news is: <a href="/plugin-overview">Extending Droid with Plugins</a> is fun and easy!</p>
+    <p>If you've built your own plugins, be sure to let us know! We'd be share links to your plugins here</p>
+    <p>We're maintaining a <a href="/plugin-wishlist">plugin wishlist here</a></p>
+{% endblock %}

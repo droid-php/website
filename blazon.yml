@@ -1,0 +1,50 @@
+---
+src: doc/
+dest: ../droid-php.github.io/
+
+site:
+    title: Droid PHP
+    properties:
+        tagline: "Cool"
+
+pages:
+    index:
+        src: index.html.twig
+    usage:
+        src: usage.md
+    installation:
+        src: installation.md
+    terminology:
+        src: terminology.md
+    droid-yml:
+        src: droid-yml.md
+    targets:
+        src: targets.md
+    inventory:
+        src: inventory.md
+    authentication:
+        src: authentication.md
+    plugin-overview:
+        src: plugin-overview.md
+    plugin-tutorial:
+        src: plugin-tutorial.md
+    plugin-wishlist:
+        src: plugin-wishlist.md
+        
+    commands:
+        handler: "\\Blazon\\Handler\\CommandsHandler"
+        classes:
+            - "\\Droid\\Command\\InventoryCommand"
+            - "\\Droid\\Command\\ConfigCommand"
+            - "\\Droid\\Command\\DebugEchoCommand"
+            - "\\Droid\\Command\\TargetRunCommand"
+            - "\\Droid\\Plugin\\Fs\\Command\\FsMkdirCommand"
+            - "\\Droid\\Plugin\\Fs\\Command\\FsChmodCommand"
+            - "\\Droid\\Plugin\\Composer\\Command\\ComposerInstallCommand"
+            - "\\Droid\\Plugin\\Bower\\Command\\BowerInstallCommand"
+            - "\\Droid\\Plugin\\Git\\Command\\GitFetchCommand"
+            - "\\Droid\\Plugin\\Git\\Command\\GitMergeCommand"
+            - "\\Droid\\Plugin\\Git\\Command\\GitPullCommand"
+            - "\\Droid\\Plugin\\Ssh\\Command\\SshExecCommand"
+            - "\\Haigha\\Command\\LoadCommand"
+            - "\\DbTk\\SchemaLoader\\Command\\SchemaLoadCommand"

@@ -37,25 +37,8 @@ We can help to create new repositories when needed.
     * filename: filename to save
     
 
-
-## droid-service
-* service:start
-    * name: service name
-* service:stop
-    * name: service name
-* service:reload
-    * name: service name
-* service:restart
-    * name: service name
-
 ## droid-fs (existing repo, needs more commands)
 
-* fs:copy Copy a single file (#505)
-    * src: source filename
-    * dst: destination filename
-    * --owner: name of the owner of the copied directory (like `chown`)
-    * --group: name of the group of the copied directory (like `chgrp`)
-    * --filemask: file permission mask (like 0640 - use octdec etc)
 * fs:rename Move/rename a file or directory to another place
     * src: source file or directory to move
     * dst: destination to move it to
@@ -76,28 +59,6 @@ We can help to create new repositories when needed.
     * src: source file or directory to move
     * dst: destination to move it to
     * --force:f: If the target file already exists, then unlink it so that the link may occur.
-
-## droid-mysql
-* mysql:dump Calls mysqldump through exec. For connection string, use `parse_url` like this: https://github.com/Radvance/Radvance/blob/master/src/Framework/BaseConsoleApplication.php#L123
-    * connection: connection string like mysql://username:password@host:port/dbname
-    * destination: destination filename
-    * --gzip|-g: gzip the output file (by piping mysqldump through gzip)
-    * --bzip2|-b: bzip2 the output file (by piping mysqldump through bzip2)
-    * --compress|-C: Pass --compress to mysqldump: Compress all information sent between the client and the server if both support compression.
-    * --force|-f: Pass --force to mysqldump: Continue even if an SQL error occurs during a table dump
-    * --ignore-tables: csv of tablenames to ignore, pass as individual --ignore-table= flags to mysqldump. Example: `--ignore-tables=”user, log, bla”`
-    * --disable-keys|-K: pass --disable-keys to mysqldump: This makes loading the dump file faster because the indexes are created after all rows are inserted.
-    * --quick|-q: This option is useful for dumping large tables. It forces mysqldump to retrieve rows for a table from the server a row at a time rather than retrieving the entire row set and buffering it in memory before writing it out.
-    * --add-locks: This results in faster inserts when the dump file is reloaded.
-    * --lock-all-tables|-x: Lock all tables across all databases. This is achieved by acquiring a global read lock for the duration of the whole dump.
-    * --lock-tables|-l: For each dumped database, lock all tables to be dumped before dumping them. The tables are locked with READ LOCAL to permit concurrent inserts in the case of MyISAM tables.
-    * --single-transaction: Dumps the consistent state of the database at the time when START TRANSACTION was issued without blocking any applications.
-
-* mysql:load Loads a mysqldump
-    * connection: connection string like mysql://username:password@host:port/dbname
-    * source: dump filename
-    * --gzip|-g: gzip the source file (by piping mysql through gzip)
-    * --bzip2|-b: bzip2 the source file (by piping mysql through bzip2)
     
 ## droid-db (using PDO)
 * db:create-database
@@ -153,16 +114,6 @@ We can help to create new repositories when needed.
     * dst: destination filename
     * --no-interaction|-n: Do not ask any interactive question
     
-## droid-hipchat
-Use https://github.com/hipchat/hipchat-php Works with http://api.hipchat.com/docs/api/method/rooms/message 
-* hipchat:message Send a hipchat message
-    * message: message contents to send
-    * --token
-    * --room: Id or name of the room
-    * --notify: Marks the message as a notification
-    * --format: text or html, defaults to html
-    * --color: Background color for message. One of "yellow", "red", "green", "purple", "gray", or "random". (default: yellow)
-    
 ## droid-slack
 Use https://github.com/maknz/slack  Check the README.md for options, descriptions and defaults.
 * slack:message Send a Slack message
@@ -207,14 +158,9 @@ Use github.com/linkorb/objectstorage. Use 2.0 IMPORTANT: Don’t use the ObjectS
     * --gridfs-db
     * --bzip2-level: level to use for Bzip2Adapter
 
-# droid-apt (TODO: needs more detailed requirements):
-* apt:install
-    * packages: packages to download with `apt-get install`, possibly multiple (apache2, mysql-server)
-* apt:update run apt-get update
+# droid-apt (TODO: needs more commands for keys and repositories):
 * apt:key-add: Add an apt-key
 * apt:repository-add: Adds an apt repo
-
-## droid-brew: (TODO: needs more detailed requirements):
 
 ## droid-docker (TODO)
 Select best PHP library, and use library where possible, shell out to console when needed. Decide what to do with helpers like docker-compose etc.

@@ -90,6 +90,10 @@ $application->add(new Acme\Droid\Plugin\FooBar\Command\FooBarHelloCommand());
 $application->run();
 ```
 
+Make the `bin/droid-foobar` file executable:
+
+    chmod 755 bin/droid-foobar
+
 ## Create the actual command (FooBarHelloCommand)
 
 In the root of your project, create a directory called `src/` and in there a directory called `Command/`.
